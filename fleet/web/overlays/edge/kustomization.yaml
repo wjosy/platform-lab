@@ -1,0 +1,5 @@
+# Overlay for the edge cluster: the base plus a smaller replica count.
+resources:
+  - ../..
+patches:
+  - path: replicas.yaml

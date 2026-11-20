@@ -1,0 +1,9 @@
+# Namespace on the target clusters (Fleet creates it).
+defaultNamespace: web
+targetCustomizations:
+  - name: edge
+    clusterSelector:
+      matchLabels:
+        env: edge
+    kustomize:
+      dir: overlays/edge      # one replica on the edge cluster

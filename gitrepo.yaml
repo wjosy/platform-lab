@@ -1,0 +1,14 @@
+# Apply on the Rancher cluster (KUBECONFIG=~/.kube/rancher-local.yaml) after you pushed platform-lab to GitHub.
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: platform-lab
+  namespace: fleet-default      # fleet-local would target the local cluster
+spec:
+  repo: https://github.com/<you>/platform-lab
+  branch: main
+  paths: [fleet/web]
+  targets:
+    - clusterSelector:
+        matchExpressions:
+          - {key: env, operator: In, values: [dev, edge]}

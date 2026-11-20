@@ -1,0 +1,4 @@
+# Base: used as it is on every cluster that has no customization (here: dev).
+resources:
+  - deployment.yaml
+  - service.yaml
