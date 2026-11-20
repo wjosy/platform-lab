@@ -5,7 +5,7 @@ metadata:
   name: platform-lab
   namespace: fleet-default      # fleet-local would target the local cluster
 spec:
-  repo: https://github.com/<you>/platform-lab
+  repo: https://github.com/wjosy/platform-lab
   branch: main
   paths: [fleet/web]
   targets:
